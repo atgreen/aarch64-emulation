@@ -1,2 +1,17 @@
-# aarch64-emulation
-Content to help with emulating aarch64 Fedora systems on x86_64
+# Emulating aarch64 Fedora Linux on x86_64 Fedora Linux
+
+I use an emulated aarch64 Linux platform for building and testing
+libffi on my vanilla x86_64 Fedora Linux laptop.
+
+Here's the command I use to build the VM...
+
+    virt-install \
+    --name Fedora_25_AArch64 --ram 4096 --arch aarch64 \
+    --disk size=8 --os-variant fedora25 \
+    --location https://dl.fedoraproject.org/pub/fedora-secondary/releases/26/Everything/aarch64/os/
+    --extra-args \
+    "inst.ks=https://raw.githubusercontent.com/atgreen/aarch64-emulation/master/Fedora-Hacking-AArch64.ks"
+
+
+Anthony Green
+green@moxielogic.com
