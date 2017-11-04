@@ -32,6 +32,7 @@ clearpart --all --initlabel --drives=sda
 %packages
 @^minimal-environment
 gcc
+gcc-c++
 git
 patch
 texinfo
